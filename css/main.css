@@ -1,3 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.omschrijving, .producten-in-de-kijker, footer {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.producten-in-de-kijker ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer address {
+  font-style: normal;
+}
 
 /*# sourceMappingURL=main.css.map */
