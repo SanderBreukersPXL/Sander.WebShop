@@ -1,28 +1,336 @@
+$primary-orange: #ff8500;
+
+/* Basisstijlen */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: center;
+  min-height: 100vh;
 }
 
+/* Headerstijlen */
 header {
   background-color: #333;
-  color: white;
+  color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 20px 0;
+  width: 100%;
+
+  h1 {
+    font-size: 36px;
+  }
 }
 
-.omschrijving, .producten-in-de-kijker, footer {
+/* Navigatiebalk */
+nav {
+  background-color: #333;
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+
+
+  }
+
+  li {
+    display: inline;
+    margin: 0 15px;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  li.login-button {
+    a {
+      background-color: #ff8500; /* Oranje accent */
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #cc6d00; /* Donkerder oranje bij hover */
+      }
+    }
+  }
+}
+
+/* Beschrijvingstijlen */
+.description {
   margin: 20px;
   padding: 20px;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 18px;
+  }
 }
 
-.producten-in-de-kijker ul {
-  list-style-type: none;
-  padding: 0;
+/* Stijlen voor de slider */
+.slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+
+  .slide {
+    min-width: 100%;
+    flex: 1;
+    transition: transform 0.5s ease;
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Pas de hoogte aan aan je behoeften */
+  }
 }
 
-footer address {
-  font-style: normal;
+/* Stijlen voor de slider-navigatie */
+.slider-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+  label {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #007bff; /* Blauwe rand */
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  input[type="radio"] {
+    display: none;
+
+    &:checked + label {
+      background-color: #007bff; /* Blauwe vulling wanneer geselecteerd */
+    }
+  }
 }
+
+/* Stijlen voor de "Producten in de kijker" sectie */
+.featured-products {
+  text-align: center; /* Centreert de inhoud van de sectie */
+  padding: 40px 0; /* Voeg wat boven- en ondermarge toe voor ruimte */
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .product {
+    width: calc(18% - 15px); /* Verdeel de breedte in 4 kolommen met minder zijmarge voor 4 producten in 1 rij */
+    margin: 15px; /* Voeg zijmarge toe tussen producten */
+    display: inline-block;
+    vertical-align: top;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+
+    .product-image {
+      width: 100%;
+      padding-left: 50px;
+      max-width: 200px;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    button {
+      background-color: $primary-orange;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 10px;
+
+      &:hover {
+        background-color: darken($primary-orange, 10%);
+      }
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0; /* Geen marge rechts voor het 4e product in elke rij */
+    }
+  }
+}
+
+
+/* Footerstijlen */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+
+  .contact {
+    h2 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        font-size: 16px;
+        margin: 5px 0;
+      }
+    }
+  }
+}
+
+
+.login-form {
+  width: 30%;
+  text-align: center;
+  padding: 50px;
+  padding-right: 80px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 200px;
+
+  h2 {
+    font-size: 24px;
+  }
+
+  form {
+    margin-top: 20px;
+
+    .form-group {
+      margin: 15px 0;
+      text-align: left;
+
+      label {
+        font-weight: bold;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #e1e1e1;
+        border-radius: 5px;
+      }
+    }
+
+    button {
+      background-color: #ff8500;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 20px;
+
+      &:hover {
+        background-color: #cc6d00;
+      }
+    }
+
+    p {
+      margin-top: 10px;
+    }
+  }
+}
+
+.pagination {
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  li {
+    margin: 0 10px;
+
+    a {
+      text-decoration: none;
+      color: #007bff; /* Blauwe kleur */
+      font-weight: bold;
+      font-size: 18px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+.filter {
+  text-align: center;
+  margin: 20px 0;
+
+  label {
+    font-size: 18px;
+  }
+
+  select {
+    font-size: 16px;
+    margin: 0 10px;
+    padding: 5px;
+  }
+}
+
+

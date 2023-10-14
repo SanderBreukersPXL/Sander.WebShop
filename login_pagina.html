@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Link voor icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  <!-- Link voor Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Josefin+Sans:300,400,600,700|Nunito:300,400,600,700" rel="stylesheet">
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Films</a></li>
+      <li><a href="#">Contact</a></li>
+      <li class="login-button"><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="login-form">
+  <h2>Login</h2>
+  <form action="login.php" method="post">
+    <div class="form-group">
+      <label for="email">E-mailadres:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Wachtwoord:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit">Inloggen</button>
+  </form>
+  <p><a href="forgot-password.html">Wachtwoord vergeten?</a></p>
+</section>
+
+<footer>
+  <section class="contact">
+    <h2>Contacteer ons</h2>
+    <p>Heb je vragen of hulp nodig? Neem contact met ons op:</p>
+    <ul>
+      <li>E-mail: info@filmverkoop.com</li>
+      <li>Telefoon: +31 123 456 789</li>
+    </ul>
+  </section>
+</footer>
+</body>
+</html>
