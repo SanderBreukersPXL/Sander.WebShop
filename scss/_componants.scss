@@ -1,0 +1,133 @@
+@use 'base' as *;
+
+.description {
+  border-top: black;
+  border-radius: 50px;
+  border-bottom: 5px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+.login-form {
+  width: 30%;
+  text-align: center;
+  padding: 50px;
+  padding-right: 80px;
+  background-color: $primary-dark;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 200px;
+
+  h2 {
+    font-size: 24px;
+  }
+
+  form {
+    margin-top: 20px;
+
+    .form-group {
+      margin: 15px 0;
+      text-align: left;
+
+      label {
+        font-weight: bold;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #e1e1e1;
+        border-radius: 5px;
+      }
+    }
+
+    button {
+      background-color: $primary-orange;
+      color: $primary-dark;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 20px;
+
+      &:hover {
+        background-color: #cc6d00;
+      }
+    }
+
+    p {
+      margin-top: 10px;
+    }
+  }
+}
+
+.product-detail {
+  display: flex;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  .product-detail-image {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  .product-detail-info {
+    width: 50%;
+    padding: 20px;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .add-to-cart-button {
+      background-color: $primary-orange;
+      color: $primary-dark;
+      width: 20%;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken($primary-orange, 10%);
+      }
+    }
+  }
+}
