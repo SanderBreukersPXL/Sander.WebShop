@@ -1,6 +1,8 @@
 $primary-orange: #ff8500;
+$darker-orange: #cc6d00;
+$primary-dark: #fff;
+$primary-blue: #007bff;
 
-/* Basisstijlen */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -9,14 +11,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  //justify-content: center;
   min-height: 100vh;
 }
 
-/* Headerstijlen */
 header {
   background-color: #333;
-  color: #fff;
+  color: $primary-dark;
   text-align: center;
   padding: 20px 0;
   width: 100%;
@@ -26,7 +26,6 @@ header {
   }
 }
 
-/* Navigatiebalk */
 nav {
   background-color: #333;
   ul {
@@ -47,7 +46,7 @@ nav {
 
     a {
       text-decoration: none;
-      color: #fff;
+      color: $primary-dark;
       font-weight: bold;
       font-size: 18px;
 
@@ -59,7 +58,7 @@ nav {
 
   li.login-button {
     a {
-      background-color: #ff8500; /* Oranje accent */
+      background-color: $primary-orange;
       color: #fff;
       padding: 10px 20px;
       border-radius: 5px;
@@ -68,13 +67,12 @@ nav {
       transition: background-color 0.3s;
 
       &:hover {
-        background-color: #cc6d00; /* Donkerder oranje bij hover */
+        background-color: $darker-orange;
       }
     }
   }
 }
 
-/* Beschrijvingstijlen */
 .description {
   border-top: black;
   border-radius: 50px;
@@ -94,7 +92,6 @@ nav {
   }
 }
 
-/* Stijlen voor de slider */
 .slider {
   display: flex;
   overflow: hidden;
@@ -107,11 +104,10 @@ nav {
     transition: transform 0.5s ease;
     background-size: cover;
     background-position: center;
-    height: 300px; /* Pas de hoogte aan aan je behoeften */
+    height: 300px;
   }
 }
 
-/* Stijlen voor de slider-navigatie */
 .slider-nav {
   display: flex;
   justify-content: center;
@@ -120,7 +116,7 @@ nav {
   label {
     width: 10px;
     height: 10px;
-    border: 1px solid #007bff; /* Blauwe rand */
+    border: 1px solid $primary-blue;
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
@@ -131,26 +127,25 @@ nav {
     display: none;
 
     &:checked + label {
-      background-color: #007bff; /* Blauwe vulling wanneer geselecteerd */
+      background-color: $primary-blue;
     }
   }
 }
 
-/* Stijlen voor de "Producten in de kijker" sectie */
 .featured-products {
-  text-align: center; /* Centreert de inhoud van de sectie */
-  padding: 40px 0; /* Voeg wat boven- en ondermarge toe voor ruimte */
+  text-align: center;
+  padding: 40px 0;
 
   h2 {
     font-size: 24px;
   }
 
   .product {
-    width: calc(18% - 15px); /* Verdeel de breedte in 4 kolommen met minder zijmarge voor 4 producten in 1 rij */
-    margin: 15px; /* Voeg zijmarge toe tussen producten */
+    width: calc(18% - 15px);
+    margin: 15px;
     display: inline-block;
     vertical-align: top;
-    background-color: #fff;
+    background-color: $primary-dark;
     border: 1px solid #e1e1e1;
     border-radius: 5px;
     padding: 20px;
@@ -186,7 +181,7 @@ nav {
 
     button {
       background-color: $primary-orange;
-      color: #fff;
+      color: $primary-dark;
       border: none;
       padding: 10px 20px;
       border-radius: 5px;
@@ -202,7 +197,7 @@ nav {
     }
 
     &:nth-child(4n) {
-      margin-right: 0; /* Geen marge rechts voor het 4e product in elke rij */
+      margin-right: 0;
     }
   }
 }
@@ -211,7 +206,7 @@ nav {
 /* Footerstijlen */
 footer {
   background-color: #333;
-  color: #fff;
+  color: $primary-dark;
   padding: 20px 0;
   text-align: center;
   width: 100%;
@@ -244,7 +239,7 @@ footer {
   text-align: center;
   padding: 50px;
   padding-right: 80px;
-  background-color: #fff;
+  background-color: $primary-dark;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin: 200px;
@@ -273,8 +268,8 @@ footer {
     }
 
     button {
-      background-color: #ff8500;
-      color: #fff;
+      background-color: $primary-orange;
+      color: $primary-dark;
       border: none;
       padding: 10px 20px;
       border-radius: 5px;
@@ -308,7 +303,7 @@ footer {
 
     a {
       text-decoration: none;
-      color: #007bff; /* Blauwe kleur */
+      color: $primary-blue;
       font-weight: bold;
       font-size: 18px;
 
@@ -335,7 +330,6 @@ footer {
   }
 }
 
-/* Stijlen voor de detailpagina */
 .product-detail {
   display: flex;
   margin: 20px;
@@ -347,7 +341,7 @@ footer {
     width: 50%;
     padding: 20px;
     display: flex;
-    justify-content: center; /* Afbeelding centreren verticaal en horizontaal */
+    justify-content: center;
 
     img {
       width: 100%;
@@ -362,21 +356,21 @@ footer {
     padding: 20px;
     padding-top: 150px;
     display: flex;
-    flex-direction: column; /* Tekst verticaal onder elkaar uitlijnen */
+    flex-direction: column;
 
     h2 {
       font-size: 24px;
-      margin-bottom: 10px; /* Ruimte onder de titel toevoegen */
+      margin-bottom: 10px;
     }
 
     p {
       font-size: 18px;
-      margin-bottom: 20px; /* Grotere ruimte onder de tekst toevoegen */
+      margin-bottom: 20px;
     }
 
     .add-to-cart-button {
       background-color: $primary-orange;
-      color: #fff;
+      color: $primary-dark;
       width: 20%;
       border: none;
       padding: 10px 20px;
