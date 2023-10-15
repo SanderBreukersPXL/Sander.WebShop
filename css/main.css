@@ -123,6 +123,11 @@ body {
   background-color: #cc6a00;
 }
 
+.button-details {
+  text-decoration: none;
+  color: white;
+}
+
 header {
   background-color: #333;
   color: #fff;
