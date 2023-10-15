@@ -63,10 +63,11 @@ nav li.login-button a:hover {
 
 /* Beschrijvingstijlen */
 .description {
+  border-top: black;
+  border-radius: 50px;
+  border-bottom: 5px;
   margin: 20px;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
@@ -137,7 +138,7 @@ nav li.login-button a:hover {
 }
 .featured-products .product .product-image {
   width: 100%;
-  padding-left: 50px;
+  padding-left: 25px;
   max-width: 200px;
   height: 250px;
   overflow: hidden;
@@ -279,6 +280,57 @@ footer .contact ul li {
   font-size: 16px;
   margin: 0 10px;
   padding: 5px;
+}
+
+/* Stijlen voor de detailpagina */
+.product-detail {
+  display: flex;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.product-detail .product-detail-image {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* Afbeelding centreren verticaal en horizontaal */
+}
+.product-detail .product-detail-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+.product-detail .product-detail-info {
+  width: 50%;
+  padding: 20px;
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column; /* Tekst verticaal onder elkaar uitlijnen */
+}
+.product-detail .product-detail-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px; /* Ruimte onder de titel toevoegen */
+}
+.product-detail .product-detail-info p {
+  font-size: 18px;
+  margin-bottom: 20px; /* Grotere ruimte onder de tekst toevoegen */
+}
+.product-detail .product-detail-info .add-to-cart-button {
+  background-color: #ff8500;
+  color: #fff;
+  width: 20%;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.product-detail .product-detail-info .add-to-cart-button:hover {
+  background-color: #cc6a00;
 }
 
 /*# sourceMappingURL=main.css.map */
